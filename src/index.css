@@ -1,0 +1,14 @@
+@import "tailwindcss";
+
+@theme {
+  --color-paper: #F5F3F9;
+  --color-panel: #FFFFFF;
+  --color-line: #E2DEEA;
+  --color-ink: #1C1826;
+  --color-muted: #6B6478;
+  --color-accent: #E8577B;
+}
+
+.font-display {
+  font-family: 'Fraunces', serif;
+}
