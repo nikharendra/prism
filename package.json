@@ -2,6 +2,8 @@
   "name": "prism",
   "private": true,
   "version": "0.0.0",
+  "description": "A perspective-based social experience that connects people through ideas rather than followers.",
+"author": "Harendra Singh Yadav",
   "type": "module",
   "scripts": {
     "dev": "vite",
