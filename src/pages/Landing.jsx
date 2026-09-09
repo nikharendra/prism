@@ -2,7 +2,7 @@ import Logo from '../components/Logo'
 
 function Landing({ onStart }) {
   return (
-    <div className="min-h-screen bg-paper text-ink flex flex-col items-center justify-center px-6 text-center">
+    <main className="min-h-screen bg-paper text-ink flex flex-col items-center justify-center px-6 text-center">
       <Logo className="mb-8" />
       <h1 className="font-display text-3xl md:text-5xl max-w-2xl leading-tight">
         What if social media wasn't about being seen, but about seeing how others think?
@@ -16,7 +16,7 @@ function Landing({ onStart }) {
       >
         Explore Perspectives
       </button>
-    </div>
+    </main>
   )
 }
 

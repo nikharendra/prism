@@ -1,3 +1,4 @@
+import ScreenHeader from '../components/ScreenHeader'
 import { REASONING_TAGS } from '../data/reasoningTags'
 
 const REACTIONS = [
@@ -13,10 +14,8 @@ function tagLabel(tagId) {
 
 function PerspectiveDetail({ perspective, onReact, onBack }) {
   return (
-    <div className="min-h-screen bg-paper text-ink px-6 py-10 flex flex-col items-center">
-      <button onClick={onBack} className="self-start text-muted text-sm mb-8 hover:text-ink">
-        Back
-      </button>
+    <main className="min-h-screen bg-paper text-ink px-6 py-10 flex flex-col items-center">
+     <ScreenHeader onBack={onBack} />
 
       <div className="max-w-md w-full">
         <p className="text-muted text-sm mb-2">{perspective.name} answered {perspective.answer}</p>
@@ -44,7 +43,7 @@ function PerspectiveDetail({ perspective, onReact, onBack }) {
           ))}
         </div>
       </div>
-    </div>
+    </main>
   )
 }
 

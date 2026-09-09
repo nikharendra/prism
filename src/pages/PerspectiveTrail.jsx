@@ -1,3 +1,4 @@
+import ScreenHeader from '../components/ScreenHeader'
 import { REASONING_TAGS } from '../data/reasoningTags'
 
 function tagInfo(tagId) {
@@ -9,16 +10,14 @@ function PerspectiveTrail({ stats, onBack }) {
   const maxCount = tagFrequencies.length > 0 ? tagFrequencies[0].count : 1
 
   return (
-    <div className="min-h-screen bg-paper text-ink px-6 py-10 flex flex-col items-center">
-      <button onClick={onBack} className="self-start text-muted text-sm mb-8 hover:text-ink">
-        Back
-      </button>
+    <main className="min-h-screen bg-paper text-ink px-6 py-10 flex flex-col items-center">
+      <ScreenHeader onBack={onBack} />
 
       <div className="max-w-md w-full">
         <p className="font-display italic text-muted mb-1">Your perspective trail</p>
         <h2 className="font-display text-2xl mb-8">How you've explored so far</h2>
 
-        <div className="flex gap-8 mb-10">
+        <div className="flex gap-8 mb-10" aria-live="polite">
           <div>
             <p className="text-3xl font-display text-accent">{perspectivesExplored}</p>
             <p className="text-muted text-sm">perspectives explored</p>
@@ -48,7 +47,7 @@ function PerspectiveTrail({ stats, onBack }) {
           })}
         </div>
       </div>
-    </div>
+    </main>
   )
 }
 

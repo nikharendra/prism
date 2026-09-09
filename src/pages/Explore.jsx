@@ -18,7 +18,7 @@ function Explore({ question, onAnswer }) {
   }
 
   return (
-    <div className="min-h-screen bg-paper text-ink flex flex-col items-center justify-center px-6">
+    <main className="min-h-screen bg-paper text-ink flex flex-col items-center justify-center px-6">
       <p className="font-display italic text-muted mb-4">Today's perspective</p>
       <h2 className="font-display text-2xl md:text-3xl max-w-xl text-center leading-snug">
         {question.text}
@@ -29,6 +29,7 @@ function Explore({ question, onAnswer }) {
         {question.options.map((option) => (
           <button
             key={option}
+            aria-pressed={selectedAnswer === option}
             onClick={() => setSelectedAnswer(option)}
             className={`px-6 py-2.5 rounded-full border transition-colors ${
               selectedAnswer === option
@@ -48,6 +49,7 @@ function Explore({ question, onAnswer }) {
             {REASONING_TAGS.map((tag) => (
               <button
                 key={tag.id}
+                aria-pressed={selectedTags.includes(tag.id)}
                 onClick={() => toggleTag(tag.id)}
                 className={`px-4 py-1.5 rounded-full text-sm border transition-colors ${
                   selectedTags.includes(tag.id) ? 'border-transparent text-white' : 'border-line text-muted hover:border-muted'
@@ -71,7 +73,7 @@ function Explore({ question, onAnswer }) {
       )}
 
       <p className="text-muted/70 text-xs mt-12">1,284 perspectives shared so far</p>
-    </div>
+    </main>
   )
 }
 

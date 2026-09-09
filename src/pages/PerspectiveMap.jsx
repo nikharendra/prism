@@ -23,11 +23,14 @@ function PerspectiveMap({ questionId, userAnswer, userTags, onSelectPerspective,
   })
 
   return (
-    <div className="min-h-screen bg-paper text-ink px-4 py-10 flex flex-col items-center">
+    <main className="min-h-screen bg-paper text-ink px-4 py-10 flex flex-col items-center">
       <div className="flex flex-col items-center mb-4">
         <div className="w-20 h-20 rounded-full bg-accent flex items-center justify-center font-medium text-white">
           You
         </div>
+        <p className="text-muted text-xs mt-1 max-w-xs text-center">
+  Ordered by shared reasoning, not popularity
+</p>
         <p className="text-muted text-sm mt-2">
           {userAnswer} — {userTags.map(tagLabel).join(' and ')}
         </p>
@@ -57,7 +60,7 @@ function PerspectiveMap({ questionId, userAnswer, userTags, onSelectPerspective,
           </div>
         ))}
       </div>
-    </div>
+    </main>
   )
 }
 
