@@ -28,12 +28,13 @@ function PerspectiveMap({ questionId, userAnswer, userTags, onSelectPerspective,
         <div className="w-20 h-20 rounded-full bg-accent flex items-center justify-center font-medium text-white">
           You
         </div>
-        <p className="text-muted text-xs mt-1 max-w-xs text-center">
-  Ordered by shared reasoning, not popularity
-</p>
+        
         <p className="text-muted text-sm mt-2">
           {userAnswer} — {userTags.map(tagLabel).join(' and ')}
         </p>
+        <p className="text-muted text-xs mt-1 max-w-xs text-center">
+  Ordered by shared reasoning, not popularity
+</p>
         <button onClick={onViewTrail} className="text-accent text-sm mt-2 hover:opacity-80">
           View my trail
         </button>
